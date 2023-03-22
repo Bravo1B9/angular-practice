@@ -9,7 +9,7 @@ export class UsersComponent {
 
   users: UserModel[] = [];
 
-  onUserAdded(userName: string) {
+  addUser(userName: string) {
     const id = this.users.length + 1;
     const newUser = new UserModel(id, userName);
     this.users.push(newUser);

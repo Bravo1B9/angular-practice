@@ -1,5 +1,5 @@
 <h1>Users:</h1>
-<app-create-user (usernameAdd)="onUserAdded($event)"></app-create-user>
+<app-create-user (usernameAdd)="addUser($event)"></app-create-user>
 <div *ngFor="let user of users">
   <h2>User ID: {{ user.id }}</h2>
   <h2>Username: {{ user.userName }}</h2>
