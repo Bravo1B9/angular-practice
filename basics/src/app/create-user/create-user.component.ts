@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: 'app-create-user',
@@ -6,10 +6,13 @@ import { Component } from "@angular/core";
 })
 export class CreateUserComponent {
 
+  @Output() usernameAdd = new EventEmitter<string>();
   enteredUsername = '';
 
   onAddUser() {
     console.log(`User ${this.enteredUsername} added.`);
+    this.usernameAdd.emit(this.enteredUsername);
+    this.enteredUsername = '';
   }
 
 }
