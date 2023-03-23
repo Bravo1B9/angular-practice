@@ -9,8 +9,7 @@ export class CreateUserComponent {
   @Output() usernameAdd = new EventEmitter<string>();
   enteredUsername = '';
 
-  onAddUser() {
-    console.log(`User ${this.enteredUsername} added.`);
+  addUser() {
     this.usernameAdd.emit(this.enteredUsername);
     this.enteredUsername = '';
   }
